@@ -1,0 +1,10 @@
+image: node:7.2.1
+
+pipelines:
+  branches:
+    master:
+      - step:
+          script:
+            - npm install
+            - npm test
+            - npm run build
