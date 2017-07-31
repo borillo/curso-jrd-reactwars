@@ -1,0 +1,1 @@
+[![Build Status](https://travis-ci.org/borillo/curso-jrd-reactwars.svg?branch=master)](https://travis-ci.org/borillo/curso-jrd-reactwars)
