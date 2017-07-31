@@ -2,6 +2,12 @@ import data from './data.films.json';
 
 export default {
   retrieveFilms() {
-    return Promise.resolve(data);
+    let films = data.results.sort((a, b) => {
+      if (a.episode_id > b.episode_id) return 1;
+      if (a.episode_id < b.episode_id) return -1;
+      return 0;
+    });
+
+    return Promise.resolve(Object.assign(data, {results: films}));
   }
 }

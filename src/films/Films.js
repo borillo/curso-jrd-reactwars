@@ -27,7 +27,8 @@ export default class Films extends Component {
           this.state.films.map((film) => {
             return (
               <div className="film" key={film.episode_id}>
-                {film.title}
+                <div className="title">{film.title}</div>
+                <div className="episode">{film.episode_id}</div>
               </div>
             );
           })
