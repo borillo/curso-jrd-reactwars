@@ -1,11 +1,24 @@
-import data from './__mocks__/data.films.json';
+const BASE_URL = 'https://swapi.co/api';
+
+const sortFilmsByEpisodeNumber = (data) => {
+    return data.results.sort((a, b) => {
+      if (a.episode_id > b.episode_id) return 1;
+      if (a.episode_id < b.episode_id) return -1;
+      return 0;
+    });
+};
 
 export default {
-  retrieveFilms() {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(data);
-      }, 100);
+  async retrieveFilms() {
+    return new Promise(async (resolve, reject) => {
+      var corsHeaders = new Headers();
+      corsHeaders.append('Origin', '*');
+
+      let response = await fetch(BASE_URL + '/films/', { headers: corsHeaders });
+      let data = await response.json();
+      
+      let sortedFilms = sortFilmsByEpisodeNumber(data);
+      resolve(Object.assign(data, {results: sortedFilms}));
     });
   }
 }
