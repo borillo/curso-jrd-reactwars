@@ -34,5 +34,5 @@ Algunos componentes incluidos:
 
 Describirmos el proceso de crear una historia de usuario a partir de una épica, detallar su definición de hecho y preparar el primer test de aceptación.
 
-Instalamos chai, enzyme y react-test-renderer.
+Instalamos enzyme y react-test-renderer.
 
