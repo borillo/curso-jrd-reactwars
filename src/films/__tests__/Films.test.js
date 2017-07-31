@@ -4,6 +4,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 
 import App from '../../App';
+import Films from '../Films';
 
 const FILM_TITLES = [
   'The Phantom Menace', 
@@ -17,20 +18,6 @@ const FILM_TITLES = [
 
 const FILM_EPISODES = FILM_TITLES.map((title, index) => index+1);
 const NUMBER_OF_FILMS = FILM_TITLES.length;
-
-class Films {
-  constructor(wrapper) {
-    this.wrapper = wrapper;
-  }
-
-  obtainFilmsTitles() {
-    return this.wrapper.find('.film .title').map((film) => film.text());
-  }
-
-  obtainFilmsEpisodes() {
-    return this.wrapper.find('.film .episode').map((film) => parseInt(film.text(), 10));
-  }
-}
 
 describe('Films', () => {
   let wrapper;
