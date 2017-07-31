@@ -1,5 +1,6 @@
 import React from 'react';
-import FilmsRepository from '../FilmsRepository';
+
+import Repository from '../Repository';
 
 const FILM_TITLES = [
   'The Phantom Menace', 
@@ -16,7 +17,7 @@ const NUMBER_OF_FILMS = FILM_TITLES.length;
 
 describe('Films API', () => {
   it('should list all movies', async () => {   
-    let films = await FilmsRepository.retrieveFilms();
+    let films = await Repository.retrieveFilms();
 
     const filmsTitles = films.results.map((film) => film.title);
 

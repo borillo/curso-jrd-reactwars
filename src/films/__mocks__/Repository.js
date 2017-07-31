@@ -1,4 +1,4 @@
-import data from './data.films.json';
+import data from './fixtures.json';
 
 export default {
   retrieveFilms() {

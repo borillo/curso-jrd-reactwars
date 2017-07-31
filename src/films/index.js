@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import FilmsRepository from './FilmsRepository';
+import repository from './Repository';
 
-export default class Films extends Component {
+export default class FilmsPanel extends Component {
   constructor(props) {
     super(props);
 
@@ -12,7 +12,7 @@ export default class Films extends Component {
   }
 
   componentWillMount() {
-    FilmsRepository.retrieveFilms()
+    repository.retrieveFilms()
       .then((response) => {
         this.setState({
           films: response.results

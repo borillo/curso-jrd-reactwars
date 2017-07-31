@@ -1,16 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 
-import Films from './films/Films';
+import FilmsPanel from './films';
 
-class App extends Component {
-  render() {
+export default () => {
     return (
       <div className="App">
-        <Films />
+        <FilmsPanel />
       </div>
     );
-  }
-}
-
-export default App;
+};
