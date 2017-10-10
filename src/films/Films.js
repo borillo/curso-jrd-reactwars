@@ -2,7 +2,11 @@ export default class Films {
   constructor(wrapper) {
     this.wrapper = wrapper;
   }
-
+ 
+  obtainFilms() {
+    return this.wrapper.find('.film');
+  }
+  
   obtainFilmsTitles() {
     return this.wrapper.find('.film .title').map((film) => film.text());
   }
