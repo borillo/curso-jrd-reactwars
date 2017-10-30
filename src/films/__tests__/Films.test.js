@@ -1,10 +1,13 @@
 jest.mock('../Repository');
 
 import React from 'react';
-import { mount } from 'enzyme';
+import { mount, configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 
 import App from '../../App';
 import Films from '../Films';
+
+configure({ adapter: new Adapter() });
 
 const FILM_TITLES = [
   'The Phantom Menace', 
@@ -23,7 +26,7 @@ describe('Films', () => {
   let wrapper;
   let films;
 
-  beforeEach(() => {
+  beforeEach(async () => {
     wrapper = mount(<App />);
     films = new Films(wrapper);
   });
