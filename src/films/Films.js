@@ -4,14 +4,14 @@ export default class Films {
   }
  
   obtainFilms() {
-    return this.wrapper.find('.film');
+    return this.wrapper.update().find('.film');
   }
   
   obtainFilmsTitles() {
-    return this.wrapper.find('.film .title').map((film) => film.text());
+    return this.wrapper.update().find('.film .title').map((film) => film.text());
   }
 
   obtainFilmsEpisodes() {
-    return this.wrapper.find('.film .episode').map((film) => parseInt(film.text(), 10));
+    return this.wrapper.update().find('.film .episode').map((film) => parseInt(film.text(), 10));
   }
 }
