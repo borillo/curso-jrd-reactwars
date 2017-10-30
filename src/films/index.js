@@ -36,7 +36,7 @@ export default class FilmsPanel extends Component {
               return (
                 <ListGroupItem key={film.episode_id}>
                   <div className="film">
-                    <div className="title">{film.title}</div>
+                    <div className="title"><strong>{film.title}</strong></div>
                     <div className="episode">Episode {film.episode_id}</div>
                   </div>
                 </ListGroupItem>
