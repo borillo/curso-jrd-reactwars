@@ -45,4 +45,8 @@ describe('Films', () => {
       expect(episode).toEqual(index + 1);
     });
   });
+
+  it('should match snapshot', async () => {
+    expect(wrapper).toMatchSnapshot();
+  });
 });
