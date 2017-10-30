@@ -12,6 +12,6 @@ export default class Films {
   }
 
   obtainFilmsEpisodes() {
-    return this.wrapper.update().find('.film .episode').map((film) => parseInt(film.text(), 10));
+    return this.wrapper.update().find('.film .episode').map((film) => film.text());
   }
 }

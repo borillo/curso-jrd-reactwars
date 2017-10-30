@@ -16,7 +16,7 @@ const FILM_TITLES = [
   'The Force Awakens'
 ];
 
-const FILM_EPISODES = FILM_TITLES.map((title, index) => index+1);
+const FILM_EPISODES = FILM_TITLES.map((title, index) => `Episode ${index+1}`);
 const NUMBER_OF_FILMS = FILM_TITLES.length;
 
 describe('Films', () => {
@@ -42,7 +42,7 @@ describe('Films', () => {
 
   it('should be ordered by episode number', async () => {
     films.obtainFilmsEpisodes().forEach((episode, index) => {
-      expect(episode).toEqual(index + 1);
+      expect(episode).toEqual(`Episode ${index + 1}`);
     });
   });
 

@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 
+import { 
+  ListGroup,
+  ListGroupItem
+} from 'react-bootstrap';
+
 import repository from './Repository';
 
 export default class FilmsPanel extends Component {
@@ -23,16 +28,22 @@ export default class FilmsPanel extends Component {
   render() {
     return (
       <div>
-        {
-          this.state.films.map((film) => {
-            return (
-              <div className="film" key={film.episode_id}>
-                <div className="title">{film.title}</div>
-                <div className="episode">{film.episode_id}</div>
-              </div>
-            );
-          })
-        }
+        <h3>Film list</h3>
+
+        <ListGroup>    
+          {
+            this.state.films.map((film) => {
+              return (
+                <ListGroupItem key={film.episode_id}>
+                  <div className="film">
+                    <div className="title">{film.title}</div>
+                    <div className="episode">Episode {film.episode_id}</div>
+                  </div>
+                </ListGroupItem>
+              );
+            })
+          }
+        </ListGroup>
       </div>
     );
   }
