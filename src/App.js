@@ -5,7 +5,6 @@ import {
   Navbar,
   Nav,
   NavItem,
-  NavDropdown,
   MenuItem
 } from 'react-bootstrap';
 
@@ -24,9 +23,7 @@ export default () => {
             </Navbar.Header>
             <Nav>
               <NavItem eventKey={1} href="/films">Films</NavItem>
-              <NavDropdown eventKey={3} title="Help" id="basic-nav-dropdown">
-                <MenuItem eventKey={3.1} href="/about">About</MenuItem>
-              </NavDropdown>
+              <MenuItem eventKey={2} href="/about">About</MenuItem>
             </Nav>
           </Navbar>
 
