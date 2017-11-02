@@ -1,5 +1,5 @@
 export default {
-  'Como starwarsadicto quiero listar todas las películas de la saga': (client) => {
+  'As an starwarsaholic i want check the course teachers in the about section': (client) => {
     client = client
       .url('http://localhost:3000')
       .waitForElementVisible('body', 2000)

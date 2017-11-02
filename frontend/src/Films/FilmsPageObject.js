@@ -1,4 +1,4 @@
-export default class Films {
+export default class FilmsPageObject {
   constructor(wrapper) {
     this.wrapper = wrapper;
   }

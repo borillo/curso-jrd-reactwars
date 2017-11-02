@@ -1,4 +1,4 @@
-import data from './fixtures.json';
+import data from './about-fixtures.json';
 
 export default {
   retrieveAbout() {

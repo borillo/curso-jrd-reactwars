@@ -5,7 +5,7 @@ import {
   ListGroupItem
 } from 'react-bootstrap';
 
-import repository from './Repository';
+import repository from './FilmsRepository';
 
 export default class FilmsPanel extends Component {
   constructor(props) {

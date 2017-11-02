@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Repository from '../Repository';
+import Repository from '../FilmsRepository';
 
 const FILM_TITLES = [
   'The Phantom Menace', 

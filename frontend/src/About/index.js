@@ -5,7 +5,7 @@ import {
   Button
 } from 'react-bootstrap';
 
-import repository from './Repository';
+import repository from './AboutRepository';
 
 export default class AboutPanel extends Component {
   constructor(props) {
@@ -19,7 +19,6 @@ export default class AboutPanel extends Component {
   componentWillMount() {
     repository.retrieveAbout()
       .then(({teachers}) => {
-        console.log(teachers);
         this.setState({ teachers });
       });  
   }
@@ -35,7 +34,7 @@ export default class AboutPanel extends Component {
             {
               this.state.teachers.map((teacher) => {
                 return (
-                  <li>{teacher}</li>
+                  <li key={teacher} className="teacher">{teacher}</li>
                 );
               })
             }

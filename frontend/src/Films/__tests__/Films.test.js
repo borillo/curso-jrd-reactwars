@@ -1,10 +1,10 @@
-jest.mock('../Repository');
+jest.mock('../FilmsRepository');
 
 import React from 'react';
 import { mount } from 'enzyme';
 
-import App from '../../App';
-import Films from '../Films';
+import Films from '../index';
+import FilmsPageObject from '../FilmsPageObject';
 
 const FILM_TITLES = [
   'The Phantom Menace', 
@@ -24,12 +24,13 @@ describe('Films', () => {
   let films;
 
   beforeEach(async () => {
-    wrapper = mount(<App />);
-    films = new Films(wrapper);
+    wrapper = mount(<Films />);
+    films = new FilmsPageObject(wrapper);
   });
 
   it('should be listed', async () => {
-    expect(films.obtainFilms()).toHaveLength(NUMBER_OF_FILMS);   
+    let filmList = films.obtainFilms();
+    expect(filmList).toHaveLength(NUMBER_OF_FILMS);   
   });
 
   it('should show name and episode number', async () => {
@@ -41,7 +42,8 @@ describe('Films', () => {
   });
 
   it('should be ordered by episode number', async () => {
-    films.obtainFilmsEpisodes().forEach((episode, index) => {
+    let episodes = films.obtainFilmsEpisodes();
+    episodes.forEach((episode, index) => {
       expect(episode).toEqual(`Episode ${index + 1}`);
     });
   });

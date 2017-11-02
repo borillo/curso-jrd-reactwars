@@ -4,12 +4,11 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { 
   Navbar,
   Nav,
-  NavItem,
-  MenuItem
+  NavItem
 } from 'react-bootstrap';
 
-import FilmsPanel from './films';
-import AboutPanel from './about';
+import Films from './Films';
+import About from './About';
 
 export default () => {
     return (
@@ -22,15 +21,15 @@ export default () => {
               </Navbar.Brand>
             </Navbar.Header>
             <Nav>
-              <NavItem eventKey={1} href="/films">Films</NavItem>
-              <MenuItem eventKey={2} href="/about">About</MenuItem>
+              <NavItem href="/films">Films</NavItem>
+              <NavItem href="/about">About</NavItem>
             </Nav>
           </Navbar>
 
           <Switch>
-            <Route exact path="/" component={FilmsPanel}/>
-            <Route path="/films" component={FilmsPanel}/>
-            <Route path="/about" component={AboutPanel}/>
+            <Route exact path="/" component={Films}/>
+            <Route path="/films" component={Films}/>
+            <Route path="/about" component={About}/>
           </Switch>
         </div>
       </BrowserRouter>
