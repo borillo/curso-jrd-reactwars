@@ -11,12 +11,12 @@
 
   "selenium": {
     "start_process": true,
-    "server_path": "./node_modules/webdriver-manager/selenium/selenium-server-standalone-3.6.0.jar",
+    "server_path": "./node_modules/webdriver-manager/selenium/selenium-server-standalone-3.8.1.jar",
     "log_path": "",
     "port": 4444,
     "cli_args": {
-      "webdriver.gecko.driver": "./node_modules/webdriver-manager/selenium/geckodriver-v0.19.0",
-      "webdriver.chrome.driver": "./node_modules/webdriver-manager/selenium/chromedriver_2.33"
+      "webdriver.gecko.driver": "./node_modules/webdriver-manager/selenium/geckodriver-v0.19.1",
+      "webdriver.chrome.driver": "./node_modules/webdriver-manager/selenium/chromedriver_2.34"
     }
   },
 
@@ -36,7 +36,7 @@
         "acceptSslCerts" : true,
         "chromeOptions" : {
           "args" : ["headless"]
-  }
+        }
       }
     }
   }
