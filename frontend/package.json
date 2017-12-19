@@ -20,15 +20,16 @@
     "build-storybook": "build-storybook -s public"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^3.2.18",
+    "@storybook/addon-info": "^3.2.18",
+    "@storybook/addon-links": "^3.2.18",
+    "@storybook/react": "^3.2.18",
     "enzyme": "^3.1.0",
     "enzyme-adapter-react-15": "^1.0.3",
     "enzyme-adapter-react-16": "^1.0.2",
     "enzyme-to-json": "^3.1.4",
     "react-test-renderer": "^16.0.0",
-    "sinon": "^4.0.2",
-    "@storybook/react": "^3.2.18",
-    "@storybook/addon-actions": "^3.2.18",
-    "@storybook/addon-links": "^3.2.18"
+    "sinon": "^4.0.2"
   },
   "jest": {
     "snapshotSerializers": [
