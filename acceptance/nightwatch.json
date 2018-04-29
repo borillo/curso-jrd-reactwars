@@ -16,7 +16,7 @@
     "port": 4444,
     "cli_args": {
       "webdriver.gecko.driver": "./node_modules/webdriver-manager/selenium/geckodriver-v0.19.1",
-      "webdriver.chrome.driver": "./node_modules/webdriver-manager/selenium/chromedriver_2.34"
+      "webdriver.chrome.driver": "./node_modules/webdriver-manager/selenium/chromedriver_2.35"
     }
   },
 
